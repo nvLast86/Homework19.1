@@ -13,7 +13,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content_type", "application/json")
         self.end_headers()
-        self.wfile.write(bytes('[]', "utf-8"))
+        self.wfile.write(body)
 
     def do_GET(self):
         get_answer = 'Hello, World wide web!'
